@@ -37,9 +37,9 @@
      * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
      */
     "vars": {
-        "EMAIL_FROM": "hello@saas-stack.startup-studio.dev",
+        "EMAIL_FROM": "sophia@ready-market.com",
         "EMAIL_FROM_NAME": "Startup Studio",
-        "EMAIL_REPLY_TO": "startupstudio.dev@gmail.com"
+        "EMAIL_REPLY_TO": "sophia@ready-market.com"
     },
     /**
      * Note: Use secrets to store sensitive data.
@@ -56,14 +56,14 @@
         {
             "binding": "DATABASE",
             "database_name": "cloudflare-workers-nextjs-saas",
-            "database_id": "94dd1269-a29c-4621-adff-1762d1af6926",
+            "database_id": "ed8bd2d9-82f9-4d25-b204-71f507afccfb",
             "migrations_dir": "src/db/migrations"
         }
     ],
     "kv_namespaces": [
         {
             "binding": "NEXT_CACHE_WORKERS_KV",
-            "id": "c6f2b077e0a34a84b3598558eb833055"
+            "id": "10c4ba721b3e4a448f217990f2a7d590"
         }
     ]
   }
