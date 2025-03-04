@@ -56,14 +56,14 @@
         {
             "binding": "DATABASE",
             "database_name": "cloudflare-workers-nextjs-saas",
-            "database_id": "94dd1269-a29c-4621-adff-1762d1af6926",
+            "database_id": "a537c8e8-ede0-4a13-a811-39c59f00e7a0",
             "migrations_dir": "src/db/migrations"
         }
     ],
     "kv_namespaces": [
         {
             "binding": "NEXT_CACHE_WORKERS_KV",
-            "id": "c6f2b077e0a34a84b3598558eb833055"
+            "id": "ee08a2e4d47b4d1ab9b95f289b036789"
         }
     ]
   }
