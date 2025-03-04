@@ -165,3 +165,4 @@ To see the changes clone https://github.com/cloudflare/workers-sdk and then do `
 20250304 cloudflare add TURNSTILE_SECRET_KEY
 20250304 github change CLOUDFLARE_API_TOKEN
 20250304 github reset CLOUDFLARE_API_TOKEN
+20250304 cloudflare api token add user
