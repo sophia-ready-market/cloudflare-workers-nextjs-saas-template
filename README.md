@@ -162,3 +162,4 @@ Since this template is based on the [OpenNext](https://opennext.js.org/cloudflar
 To see the changes clone https://github.com/cloudflare/workers-sdk and then do `git diff dba3f2158...main -- packages/create-cloudflare/templates-experimental/next/` you will see the changes that we need to make to this template.
 
 20250304 deploy cloudflare
+20250304 cloudflare add TURNSTILE_SECRET_KEY
