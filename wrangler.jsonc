@@ -37,9 +37,9 @@
      * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
      */
     "vars": {
-        "EMAIL_FROM": "hello@saas-stack.startup-studio.dev",
+        "EMAIL_FROM": "hello@cloudflare-workers-nextjs-saas-template.sophiawork.workers.dev",
         "EMAIL_FROM_NAME": "Startup Studio",
-        "EMAIL_REPLY_TO": "startupstudio.dev@gmail.com"
+        "EMAIL_REPLY_TO": "sophia@ready-market.com"
     },
     /**
      * Note: Use secrets to store sensitive data.
