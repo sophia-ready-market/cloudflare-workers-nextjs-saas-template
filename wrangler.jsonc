@@ -37,7 +37,7 @@
      * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
      */
     "vars": {
-        "EMAIL_FROM": "hello@cloudflare-workers-nextjs-saas-template.sophiawork.workers.dev",
+        "EMAIL_FROM": "sophia@resend.dev",
         "EMAIL_FROM_NAME": "Startup Studio",
         "EMAIL_REPLY_TO": "sophia@ready-market.com"
     },
