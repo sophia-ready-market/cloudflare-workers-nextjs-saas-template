@@ -169,3 +169,4 @@ To see the changes clone https://github.com/cloudflare/workers-sdk and then do `
 20250304 github reset again CLOUDFLARE_API_TOKEN
 20250304 change wrangler.jsonc
 20250305 change wrangler.jsonc EMAIL_FROM
+20250312 deploy test
