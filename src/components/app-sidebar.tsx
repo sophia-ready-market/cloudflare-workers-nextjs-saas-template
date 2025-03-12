@@ -177,23 +177,23 @@ const data: Data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { session } = useSessionStore()
   const [teams, setTeams] = React.useState(data.teams)
-  const [selectedTeam, setSelectedTeam] = React.useState(data.teams[0])
+  //const [selectedTeam, setSelectedTeam] = React.useState(data.teams[0])
   
   // Use session user ID or fallback to demo user ID
   const currentUserId = session?.user?.id || data.user.id
   
   // Use session role or fallback to demo user role
-  const userRole = session?.user?.role || data.user.role
+  //const userRole = session?.user?.role || data.user.role
 
   const handleCreateTeam = React.useCallback(async (teamData: { name: string }) => {
     try {
       // In a real app, this would be an API call
-      const newTeam = {
+      const newTeam: Data['teams'][number] = {
         id: `team${teams.length + 1}`,
         name: teamData.name,
         logo: Command, // Default logo
         plan: "Free", // Default to Free plan
-        members: [{ userId: currentUserId, role: 'sales' }]
+        members: [{ userId: currentUserId, role: 'sales' as const }]
       }
 
       // Simulate API delay

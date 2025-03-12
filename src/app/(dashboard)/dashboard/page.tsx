@@ -2,7 +2,6 @@
 
 import { PageHeader } from "@/components/page-header"
 import { useRouter, useSearchParams } from "next/navigation"
-import { useSessionStore } from "@/state/session"
 import { Button } from "@/components/ui/button"
 import { Settings, Users, Activity } from "lucide-react"
 
@@ -47,7 +46,7 @@ const data = {
 }
 
 export default function Page() {
-  const { session } = useSessionStore()
+  const router = useRouter()
   const searchParams = useSearchParams()
   const teamId = searchParams.get('team')
   const currentTeam = teamId ? data.teams.find(t => t.id === teamId) : null

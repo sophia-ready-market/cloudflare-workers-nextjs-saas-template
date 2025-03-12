@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ChevronsUpDown, GalleryVerticalEnd, Plus } from "lucide-react"
+import { ChevronsUpDown, GalleryVerticalEnd } from "lucide-react"
 import { TeamCreateDialog } from "@/components/team-create-dialog"
 import { useRouter, useSearchParams } from "next/navigation"
 
@@ -25,7 +25,6 @@ export function TeamSwitcher({
   teams,
   currentUserId,
   onCreateTeam,
-  onTeamChange,
 }: {
   teams: {
     id: string
@@ -39,7 +38,6 @@ export function TeamSwitcher({
   }[]
   currentUserId: string
   onCreateTeam: (teamData: { name: string }) => void
-  onTeamChange?: (team: typeof teams[0]) => void
 }) {
   const { isMobile } = useSidebar()
   const router = useRouter()
@@ -101,7 +99,7 @@ export function TeamSwitcher({
             </DropdownMenuLabel>
             {teams.map((team, index) => {
               const currentUserRole = team.members.find(m => m.userId === currentUserId)?.role;
-              const isSales = currentUserRole === 'sales';
+              //const isSales = currentUserRole === 'sales';
               
               return (
                 <DropdownMenuItem

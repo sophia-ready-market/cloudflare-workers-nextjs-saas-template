@@ -23,12 +23,12 @@ import {
 } from "@/components/ui/select"
 
 interface TeamInviteDialogProps {
-  teamId: string
+  //teamId: string
   teamName: string
   onInvite: (email: string, role: 'user' | 'sales') => void
 }
 
-export function TeamInviteDialog({ teamId, teamName, onInvite }: TeamInviteDialogProps) {
+export function TeamInviteDialog({ /*teamId,*/ teamName, onInvite }: TeamInviteDialogProps) {
   const [email, setEmail] = React.useState("")
   const [role, setRole] = React.useState<"user" | "sales">("user")
   const [open, setOpen] = React.useState(false)
