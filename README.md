@@ -1,3 +1,6 @@
+# cloudflare-workers-nextjs-saas-template
+https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
+
 # Cloudflare Workers SaaS Template
 
 [![.github/workflows/deploy.yml](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template/actions/workflows/deploy.yml)

@@ -46,8 +46,10 @@ export function TeamSwitcher({
   // Find active team from URL parameter or default to first team
   const activeTeamId = searchParams.get('team')
   const [activeTeam, setActiveTeam] = React.useState(
-    teams.find(t => t.id === activeTeamId) || teams[0]
+    //teams.find(t => t.id === activeTeamId) || teams[0]
+    activeTeamId ? teams.find(t => t.id === activeTeamId) : null
   )
+  const isDashboard = !activeTeamId
 
   return (
     <SidebarMenu>
@@ -59,16 +61,22 @@ export function TeamSwitcher({
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                <activeTeam.logo className="size-4" />
+                {isDashboard ? (
+                  <GalleryVerticalEnd className="size-4" />
+                ) : (
+                  <activeTeam.logo className="size-4" />
+                )}
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">
-                  {activeTeam.name}
+                  {isDashboard ? "Dashboard" : activeTeam.name}
                 </span>
-                <span className="truncate text-xs">
-                  {activeTeam.plan}
-                  {activeTeam.members.find(m => m.userId === currentUserId)?.role === 'sales' && ' • Sales'}
-                </span>
+                {!isDashboard && (
+                  <span className="truncate text-xs">
+                    {activeTeam.plan}
+                    {activeTeam.members.find(m => m.userId === currentUserId)?.role === 'sales' && ' • Sales'}
+                  </span>
+                )}
               </div>
               <ChevronsUpDown className="ml-auto" />
             </SidebarMenuButton>
